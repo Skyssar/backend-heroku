@@ -18,7 +18,8 @@ app.use('/api', apiRouter);
 // app.get('*', (req, res)=>{
 //     res.status(404).send("Hola, no encontré nada");
 // })
+app.set('PORT', process.env.PORT || 3000 );
 
-app.listen(3000, ()=>{
+app.listen(app.get('PORT'), ()=>{
     console.log("Server up");
 });
