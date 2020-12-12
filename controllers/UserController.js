@@ -18,7 +18,7 @@ exports.login = async (req, res, next) =>{
             if (passwordIsValid){
                 const token = jwt.sign({
                     id: user.id,
-                    name: user.nombre,
+                    nombre: user.nombre,
                     email: user.email,
                     rol: user.rol 
                 },
